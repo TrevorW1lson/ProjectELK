@@ -122,9 +122,9 @@ A summary of the access policies in place can be found in the table below.
 | Name      | Publicly Accessible | Allowed IP Addresses |
 |---------- |---------------------|----------------------|
 | Jump Box  | Yes                 | local machine ip     |
-| Web-1     | No                  | 10.1.0.4             |
-| Web-2     | No                  | 10.1.0.4             |
-| ELK-Server| No                  | 10.1.0.4             |
+| Web-1     | No                  | 10.0.0.7             |
+| Web-2     | No                  | 10.0.0.7             |
+| ELK-Server| No                  | 10.0.0.7             |
 
 ### Elk Configuration
 
@@ -190,7 +190,7 @@ $ cd /etc/ansible
 $ cat > hosts <<EOF
 [webservers]
 10.0.0.6
-10.0.0.7
+10.0.0.6
 
 [elk]
 10.1.0.4
