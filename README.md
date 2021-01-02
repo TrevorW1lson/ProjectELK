@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![RedTeam Diagram](Images/VM-FlowChart.png)
+![RedTeam Diagram](https://github.com/TrevorW1lson/ProjectELK/blob/main/Images/VM-FlowChart.PNG)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
@@ -59,6 +59,11 @@ These files have been tested and used to generate a live ELK deployment on Azure
           - 5601:5601
           - 9200:9200
           - 5044:5044
+    
+    - name: Enable Docker Service
+      systemd:
+        name: docker
+        enabled: yes
   ```
     
 
